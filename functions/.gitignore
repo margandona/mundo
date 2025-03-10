@@ -1,0 +1,15 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Environment variables
+
+# Firebase service account key
+database/mundo.json
+
+# Other
+.DS_Store

@@ -1,0 +1,60 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "Contact Form Tests",
+  "requests": [
+    {
+      "name": "Submit Contact Form - Success",
+      "method": "POST",
+      "url": "http://localhost:3000/contact",
+      "auth": {
+        "type": "none"
+      },
+      "body": {
+        "type": "json",
+        "raw": {
+          "fullName": "John Doe",
+          "phone": "1234567890",
+          "email": "john.doe@example.com",
+          "message": "This is a test message."
+        }
+      },
+      "tests": [
+        {
+          "type": "json",
+          "test": "response.status === 200"
+        },
+        {
+          "type": "json",
+          "test": "response.body.message === 'Contact form submitted successfully'"
+        }
+      ]
+    },
+    {
+      "name": "Submit Contact Form - Missing Fields",
+      "method": "POST",
+      "url": "http://localhost:3000/contact",
+      "auth": {
+        "type": "none"
+      },
+      "body": {
+        "type": "json",
+        "raw": {
+          "fullName": "",
+          "phone": "",
+          "email": "",
+          "message": ""
+        }
+      },
+      "tests": [
+        {
+          "type": "json",
+          "test": "response.status === 400"
+        },
+        {
+          "type": "json",
+          "test": "response.body.error === 'All fields are required'"
+        }
+      ]
+    }
+  ]
+}
