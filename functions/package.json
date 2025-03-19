@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "",
@@ -13,14 +14,19 @@
   "description": "",
   "dependencies": {
     "@firebase/functions": "^0.12.3",
+    "bcryptjs": "^3.0.2",
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "firebase": "^11.4.0",
-    "firebase-functions": "^6.3.2"
+    "firebase-admin": "^13.2.0",
+    "firebase-functions": "^6.3.2",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1"
   },
   "devDependencies": {
+    "eslint": "^9.22.0",
     "nodemon": "^3.1.9"
   }
 }

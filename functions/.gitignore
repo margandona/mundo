@@ -13,3 +13,6 @@ database/mundo.json
 
 # Other
 .DS_Store
+
+# Ignorar el archivo .env
+.env

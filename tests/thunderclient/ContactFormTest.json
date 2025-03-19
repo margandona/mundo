@@ -5,7 +5,7 @@
     {
       "name": "Submit Contact Form - Success",
       "method": "POST",
-      "url": "http://localhost:3000/contact",
+      "url": "http://localhost:5000/contact",
       "auth": {
         "type": "none"
       },
@@ -13,6 +13,7 @@
         "type": "json",
         "raw": {
           "fullName": "John Doe",
+          "countryCode": "+1",
           "phone": "1234567890",
           "email": "john.doe@example.com",
           "message": "This is a test message."
@@ -32,7 +33,7 @@
     {
       "name": "Submit Contact Form - Missing Fields",
       "method": "POST",
-      "url": "http://localhost:3000/contact",
+      "url": "http://localhost:5000/contact",
       "auth": {
         "type": "none"
       },
@@ -40,6 +41,7 @@
         "type": "json",
         "raw": {
           "fullName": "",
+          "countryCode": "",
           "phone": "",
           "email": "",
           "message": ""
