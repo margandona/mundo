@@ -16,3 +16,16 @@ database/mundo.json
 
 # Ignorar el archivo .env
 .env
+
+# Added files and directories
+.firebaserc
+constants.js
+crossbrowser.js
+firebase.json
+.eslintrc.js
+.firebaserc
+firebase.json
+index.html
+index.js
+scheduler.js
+utils.js
